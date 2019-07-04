@@ -1,2 +1,2 @@
 # test11
-qt program fo testing variable separation
+qt desktop program fo testing variable separation

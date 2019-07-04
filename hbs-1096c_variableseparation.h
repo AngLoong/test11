@@ -5,9 +5,11 @@
 #include <QVector>
 #include <iostream>
 
+#include "hbs1096c_struct.h"
+
 struct VariablePara{
   int step_num;
-  int layout_type;
+  TypeLayout layout_type;
   int layout_num;
 };
 

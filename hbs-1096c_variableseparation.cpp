@@ -19,20 +19,11 @@ int VariableSeparation(QString exp,QVector<VariablePara> * vpara_pt) {
                 temp_para.step_num = temp_step_num;
             ret = LayoutSepara(temp_layout,&temp_layout_type,&temp_layout_num);
             if(ret >= 0) {
-                switch(temp_layout_type) {
-                case "STD":
+                if(temp_layout_type == "STD")
                     temp_para.layout_type = 1;
-                    break;
-                case "PC":
-                    temp_para.layout_type = 2;
-                    break;
-                case "NC":
-                    temp_para.layout_type = 3;
-                    break;
-                default:
-                    temp_para.layout_type = 0;
-                    break;
-                }
+
+
+
                 temp_para.layout_num = temp_layout_num.toInt();
             }
 

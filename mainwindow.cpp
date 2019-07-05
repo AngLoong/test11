@@ -18,8 +18,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString temp,dis,dis2,str2,lay_str,num_str,step_str,layout_str;
+    QString temp,dis,dis2,dis3,step_str,layout_str;
     QVector<QString> vstr;
+    VariablePara var;
     double dtemp;
     bool ok;
     int ret;
@@ -31,12 +32,45 @@ void MainWindow::on_pushButton_clicked()
     }
     ui->textEdit->setText(dis);
     dis2 = "";
+    dis3 = "";
     for(int i = 0;i < vstr.count();i++) {
         ret = StepLayoutSepara(vstr.at(i),&step_str,&layout_str);
-        if(ret >= 0)
+        if(ret >= 0){
             dis2.append(step_str).append(">>").append(layout_str).append("\n");
+            VariableExpToStruct(vstr.at(i),&var);
+            dis3.append("STEP->>").append(QString::number(var.step_num)).append("\n");
+            switch(var.var_type) {
+            case VARIABLE_STD:
+                dis3.append("STD");
+                dis3.append("-->").append(QString::number(var.var_num));
+                break;
+            case VARIABLE_NC:
+                dis3.append("NC");
+                break;
+            case VARIABLE_PC:
+                dis3.append("PC");
+                break;
+            case VARIABLE_CM:
+                dis3.append("CM");
+                break;
+            case VARIABLE_TIME:
+                dis3.append("TIME");
+                break;
+            case VARIABLE_OD:
+                dis3.append("OD");
+                break;
+            default:
+                break;
+            }
+            dis3.append("\n");
+
+        } else {
+
+        }
+
     }
     ui->textBrowser->setText(dis2);
+    ui->textBrowser_2->setText(dis3);
 
 //    dis2 = "";
 //    for(int i = 0;i < vstr.count();i++) {

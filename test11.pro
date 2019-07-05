@@ -16,11 +16,13 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     hbs1096c_struct.cpp \
     hbs1096c_variableseparation.cpp \
-    hbs1096c_logmsg.cpp
+    hbs1096c_logmsg.cpp \
+    reversepolishcalculator.cpp
 
 HEADERS  += mainwindow.h \
     hbs1096c_struct.h \
     hbs1096c_variableseparation.h \
-    hbs1096c_logmsg.h
+    hbs1096c_logmsg.h \
+    reversepolishcalculator.h
 
 FORMS    += mainwindow.ui

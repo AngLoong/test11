@@ -14,11 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    hbs-1096c_variableseparation.cpp \
-    hbs1096c_struct.cpp
+    hbs1096c_struct.cpp \
+    hbs1096c_variableseparation.cpp \
+    hbs1096c_logmsg.cpp
 
 HEADERS  += mainwindow.h \
-    hbs-1096c_variableseparation.h \
-    hbs1096c_struct.h
+    hbs1096c_struct.h \
+    hbs1096c_variableseparation.h \
+    hbs1096c_logmsg.h
 
 FORMS    += mainwindow.ui

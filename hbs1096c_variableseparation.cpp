@@ -1,4 +1,4 @@
-#include "hbs-1096c_variableseparation.h"
+#include "hbs1096c_variableseparation.h"
 
 using std::cout;
 using std::endl;
@@ -20,10 +20,13 @@ int VariableSeparation(QString exp,QVector<VariablePara> * vpara_pt) {
             ret = LayoutSepara(temp_layout,&temp_layout_type,&temp_layout_num);
             if(ret >= 0) {
                 if(temp_layout_type == "STD")
-                    temp_para.layout_type = 1;
-
-
-
+                    temp_para.layout_type = LAYOUT_STD;
+                else if(temp_layout_type == "NC")
+                    temp_para.layout_type = LAYOUT_NC;
+                else if(temp_layout_type == "PC")
+                    temp_para.layout_type = LAYOUT_PC;
+                else if(temp_layout_type == "CM")
+                    temp_para.layout_type = LAYOUT_CM;
                 temp_para.layout_num = temp_layout_num.toInt();
             }
 

@@ -2,7 +2,7 @@
 
 #include <QVector>
 
-#include "hbs1096c_sql.h"
+//#include "hbs1096c_sql.h"
 #include "hbs1096c_logmsg.h"
 
 QVector <FilterPara> g_filter_para;

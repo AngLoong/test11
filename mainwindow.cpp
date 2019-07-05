@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "hbs-1096c_variableseparation.h"
+#include "hbs1096c_variableseparation.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
